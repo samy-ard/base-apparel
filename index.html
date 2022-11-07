@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="site-page">
+    <div class="row">
+      <div class="col col-text">
+        <header class="site-header">
+          <a href="#" class="site-link" title="Site Logo">
+            <img class="site-logo" src="./images/logo.svg" alt="Logo"/>
+          </a>
+        </header>
+        <main class="site-main">
+          <img class="main-image" src="./images/hero-mobile.jpg" alt="Hero Image">
+          <div class="main-text">
+            <h1 class="site-title"><span class="highlight">We're</span> coming soon</h1>
+            <p class="site-desc">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+            <form class="site-form" action="#" method="post">
+              <div class="form-group">
+                <input type="text" class="form-control" name="email" placeholder="Email Address">
+                <img src="./images/icon-error.svg" class="error-icon hidden" alt="Error" aria-hidden="true"/>
+                <button type="submit" class="btn btn-submit"><img src="./images/icon-arrow.svg" class="btn-icon"/></button>
+                <p class="form-message"></p>
+              </div>
+            </form>
+          </div>
+        </main>
+      </div>
+      <div class="col col-image">
+        <img class="site-image" src="./images/hero-desktop.jpg" alt="Hero Image">
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

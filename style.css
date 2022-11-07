@@ -1,0 +1,269 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--eunry:	hsl(0, 36%, 70%);
+	--carnation: hsl(0, 93%, 68%);
+	--masala: hsl(0, 6%, 24%);
+	--white: hsl(0, 0%, 100%);
+	--chabalis: hsl(0, 100%, 98%);
+	--pink: hsl(0, 80%, 86%);
+	--coral: hsl(0, 74%, 74%);
+}
+/* General */
+html, body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--eunry);
+	font-family: 'Josefin Sans', sans-serif
+}
+
+body {
+	background-color: var(--masala);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--masala);
+	font-weight: 600;
+	line-height: 1.05;
+	margin: 0 0 1rem;
+	letter-spacing: 0.6875rem;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+p {
+	margin: 0 0 1rem;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+[class^="col-"] {
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
+.btn {
+	cursor: pointer;
+	border: none;
+	display: inline-block;
+	font-size: 0.875rem;
+	-webkit-appearance: none;
+	border-radius: 2rem;
+	padding: 0.875rem 1.625rem;
+	transition: background 0.5s ease-in-out;
+	background-image: linear-gradient(135deg, var(--pink), var(--coral));
+}
+
+.btn:hover, .btn:active, .btn:focus {
+	outline: none;
+	background-image: linear-gradient(135deg, var(--chabalis), var(--pink));
+
+}
+
+/* Header */
+.site-header {
+	padding: 1.9375rem 2rem 2rem;
+}
+
+.site-link {
+	display: block;
+	width: 6.25rem;
+}
+
+.site-image {
+	display: none;
+}
+
+.col-text {
+	max-width: 23.4375rem;
+	margin: 0 auto;
+	background-color: var(--white);
+}
+
+/* Main Content */
+
+.main-text {
+	text-align: center;
+	padding: 4rem 2rem 5.5rem;
+}
+
+.highlight {
+	color: var(--eunry);
+	font-weight: 300;
+}
+
+.site-desc {
+	font-size: 0.875rem;
+	line-height: 1.571428;
+	margin-bottom: 2rem;
+}
+
+.form-group {
+	position: relative;
+	z-index: 1;
+}
+
+.form-control {
+	font-family: inherit;
+	display: block;
+	width: 100%;
+	font-size: 0.875rem;
+	line-height: 1;
+	font-weight: 700;
+	letter-spacing: -0.25px;
+	border-radius: 2rem;
+	padding: 1rem 3.875rem 0.9375rem 1.375rem;
+	border: 0.0625rem solid var(--eunry);
+	transition: all 0.15s ease-in-out;
+}
+
+.form-control::placeholder {
+	color: var(--eunry);
+}
+
+.form-control.error {
+	border-color: var(--carnation);
+}
+
+.form-control:focus, .form-control:active {
+	border-color: var(--coral);
+	outline: none;
+}
+
+
+.btn-submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+}
+
+.form-message {
+	position: absolute;
+	top: 4rem;
+	left: 2rem;
+	font-size: 0.8125rem;
+}
+
+.error-icon {
+	position: absolute;
+	top: 50%;
+	right: 7.375rem;
+	transform: translateY(-50%);
+	transition: all 0.5s ease-in;
+}
+
+.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+@media screen and ( min-width: 992px ) {
+	.site-page {
+		max-width: 90rem;
+		margin: auto;
+		min-height: 100vh;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.col-text {
+		flex: 0 0 57.638888%;
+		max-width: 57.638888%;
+		padding: 0 6rem 0 5rem;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url('./images/bg-pattern-desktop.svg');
+		height: auto;
+	}
+
+	.col-image {
+		flex: 0 0 42.3611111%;
+		max-width: 42.3611111%;
+	}
+
+	.site-link {
+		width: 9.875rem;
+	}
+
+	.site-image {
+		display: block;
+	}
+
+	.main-image {
+		display: none;
+	}
+
+	.main-text {
+		text-align: left;
+		padding: 0;
+	}
+
+	.site-header {
+		padding: 4.125rem 0;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	h1 {
+		font-size: 4.0625rem;
+		line-height: 1.076923;
+		letter-spacing: 1.03125rem;
+		margin: 0 0 1.25rem;
+	}
+
+	.site-image {
+		height: 100%;
+	}
+
+	.col-text {
+		padding: 0 13.625rem 0 10.25rem;
+	}
+
+	.site-header {
+		padding-bottom: 0;
+	}
+
+	.site-main {
+		padding: 8.125rem 0;
+	}
+
+	.site-desc {
+		font-size: 1rem;
+		line-height: 1.75;
+		margin-bottom: 2.5rem;
+		letter-spacing: 0.1px;
+	}
+
+	.form-control {
+		font-size: 1rem;
+		line-height: 2;
+		padding: 0.75rem 9rem 0.5rem 2rem;
+	}
+
+	.btn-submit {
+		padding: 1.0625rem 2.8125rem;
+	}
+}
